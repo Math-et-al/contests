@@ -1,0 +1,50 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage{comment}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{mhchem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{titling}
+\usepackage{draftwatermark}
+\usepackage{hyperref}
+\usepackage[shortlabels]{enumitem}
+\pagestyle{fancy}
+\setlength{\headheight}{40pt}
+
+\newenvironment{solution}
+  {\renewcommand\qedsymbol{$\blacksquare$}
+  \begin{proof}[Solution]}
+  {\end{proof}}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+\newtheorem{lemma}{Lemma}
+
+\definecolor{meablue}{HTML}{0160E2}
+\definecolor{meared}{HTML}{BE3751}
+
+\graphicspath{ {./assets/} }
+\SetWatermarkAngle{0}
+\SetWatermarkText{\includegraphics[scale=0.3]{watermark.png}}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue
+}
+
+\predate{}
+\postdate{}
+
+\preauthor{}
+\postauthor{}
