@@ -40,18 +40,18 @@
 \begin{enumerate}[align=left,start=1,label=\textbf{\textcolor{meablue}{Problem \arabic*}}]
     \item {[$4$ points*]} Concentric circles $\omega_1$ and $\omega_2$ are centered at $O_1$ and have radii of $5$ and $13$, respectively. A third circle $\omega_3$ centered at $O_2$ is externally tangent to $\omega_1$ and intersects $\omega_2$ at $M$ and $N$. Let $P$ be the point on $\omega_2$ such that $PO_1$ is perpendicular to $O_1 O_2$ and is closer to $M$ than $N$. If $PN$ is tangent to $\omega_1$, then the radius of $\omega_3$ is $\frac{m}{n}$ for relatively prime positive integers $m, n$. Find $m + n$.
     
-    \textrm{\emph{Proposed by TheCelestialCube}}
+    \textrm{\emph{Proposed by TheCelestialCube (TCC)}}
 
     \begin{solution}
-        Set $Q = w_1 \cap PN$ and $Y = MN \cap O_1 O_2$. Construct point $X$ on the extension of $MN$ so that $XP \perp MN$. $PQ = 12$ by the Pythagorean Theorem, and thus $PN = 24$. Note $\triangle PXN \sim \triangle P Q O_1$, through similarity we obtain $NY = \frac{119}{13}$ and $O_1 Y = \frac{120}{13}$. Denote $r$ as the desired radius and note $\sqrt{r^2 - NY^2} + O_1 Y = r + 5$, and we solve to find that $r = \frac{661}{55}$ for an answer of $716$.
+        Set $Q = w_1 \cap PN$ and $Y = MN \cap O_1 O_2$. \\ Construct point $X$ on the extension of $MN$ so that $XP \perp MN$. $PQ = 12$ by the Pythagorean Theorem, and thus $PN = 24$. Note $\triangle PXN \sim \triangle P Q O_1$, through similarity we obtain $NY = \frac{119}{13}$ and $O_1 Y = \frac{120}{13}$. Denote $r$ as the desired radius and note $\sqrt{r^2 - NY^2} + O_1 Y = r + 5$, and we solve to find that $r = \frac{661}{55}$ for an answer of $716$.
     \end{solution}
     \item {[$5$ points]}
         As a present for the anniversary, Mango recieved an $m$ times $n$ (for positive integers $m, n$) chess board, along with some tokens. He places some tokens in the board (each cell can contain \emph{any amount} of tokens). Mango observes that the total amount of tokens in each row and each column is even. Prove that there are an even number of tokens that are in white cells.
 
-    \textrm{\emph{Proposed by Polarity (aka TropicoMango)}}
+    \textrm{\emph{Proposed by Polarity (TropicoMango)}}
     
     \begin{solution}
-        We provide a beautiful algorithmic proof. Note that since the number of tokens in each row is even, the sum of tokens in all rows is even.  Thus the total amount of tokens is even. Therefore, there is either an even number of tokens in both white and back cells, or an odd number of tokens in both white and black cells. We prove it must be the former. 
+        We provide a nice algorithmic proof. Note that since the number of tokens in each row is even, the sum of tokens in all rows is even.  Thus the total amount of tokens is even. Therefore, there is either an even number of tokens in both white and back cells, or an odd number of tokens in both white and black cells. We prove it must be the former. 
         \\ \\
         Consider every cell on the board. For any cell, we remove the maximum even amount of tokens possible from that cell so that there remains 1 or 0 tokens, depending on if the original number of tokens was odd or even. We repeat for every cell, so that every cell on the board has either 1 or 0 tokens. Note that, the condition of an even amount of tokens in each row and column must still be satisfied, since we only removed an even amount of tokens in each row and column. Also, we removed an even number of tokens from both white cells and blacks cells.
         \\ \\ 
@@ -67,7 +67,7 @@
     \item {[$6$ points]} Find all solutions in rational numbers $(x, y, z)$ such that
         \[x + \sqrt[3]{3}y + \sqrt[3]{9}z = 0\]
 
-    \textrm{\emph{Proposed by Polarity (modified from 1983 Kurschak Competition)}}
+    \textrm{\emph{Proposed by Polarity (TropicoMango)}}
 
     \begin{solution}
         Set $a = x$, $b = \sqrt[3]{3}y$, $c = \sqrt[3]{9}z$, and note that $a^3 + b^3 + c^3 - 3abc = 0$ as $a + b + c = 0$. 
@@ -118,11 +118,11 @@
         Find the number of \emph{Threetastic} numbers.
     \end{enumerate}
 
-    \textrm{\emph{Proposed by Polarity}}
+    \textrm{\emph{Proposed by Polarity (TropicoMango)}}
 
     \begin{solution}
         \begin{enumerate}
-            \item Consider an 3 times $x + 2$ grid of \emph{Threetris}. There are 3 ways to fill the bottom row of 3 cells. We can have: a long piece, an $L$ piece and it's counterpart for a 2 times 3 grid, or a $J$ piece and it's counterpart for a 2 times 3 grid. In the former case we have a $x + 1$ height grid left, while the latter two cases result in a $x$ height grid remaining. Thus note that $T(x + 2) = T(x + 1) + 2 T(x)$. From here we can either solve the recurrence for a closed form or compute the first $10$ terms, noting that $T(1) = 1$ and $T(2) = 3$. Either way we obtain 683 as the answer. 
+            \item Consider an 3 times $x + 2$ grid of \emph{Threetris}. There are 3 ways to fill the bottom row of 3 cells. We can have: a long piece, an $L$ piece and it's counterpart for a 2 times 3 grid, or a $J$ piece and it's counterpart for a 2 times 3 grid. In the former case we have a $x + 1$ height grid left, while the latter two cases result in a $x$ height grid remaining. Hence note that $T(x + 2) = T(x + 1) + 2 T(x)$. From here we can either solve the recurrence for a closed form or compute the first $10$ terms, noting that $T(1) = 1$ and $T(2) = 3$. Either way we obtain 683 as the answer. 
             
             \item We first solve the recurrence obtained in part a. Note it's characteristic equation is $x^2 - x - 2 = (x - 2)(x + 1)$. Thus $T(N) = \alpha (2)^N + \beta (-1)^N$ for constants $\alpha, \beta$. Using the initial conditions $T(1) = 1$ and $T(2) = 3$, we obtain $(\alpha, \beta) = (\frac{2}{3}, \frac{1}{3})$. Thus
             \[T(N) = \frac{(2)^{N+1} + (-1)^N}{3}\] 
@@ -131,19 +131,53 @@
             \[\mathcal{T}(T(x)) = \mathcal{T}((2)^{x+1} + (-1)^x)) - 1 = \mathcal{T}((2)^{x+1} + 1)) - 1\]
             Since $3 \mid 2 + 1$, $\mathcal{T}((2)^{x+1} + 1^{x + 1}) = \mathcal{T}(2 + 1) + \mathcal{T}(x + 1) = 1 + \mathcal{T}(x + 1)$ by the Lifting-the-exponent lemma. Thus $\mathcal{T}(T(x)) = \mathcal{T}(x + 1)$. 
             \\ \\
-            $\mathcal{T}(x + 1) \mid 2022$ by the third assertion. Thus, by the first assertion, $x + 1 = 3^{s} \cdot 2^{t}$ for some positive integers $s, t$ such that $s \mid 2022$. 
+            $\mathcal{T}(x + 1) \mid 2022$ by the third assertion. By the first assertion, $x + 1 = 3^{s} \cdot 2^{t}$ for some positive integers $s, t$ such that $s \mid 2022$. 
             \\ \\
             The second assertion implies $(s + 1)(t + 1) < 1000$. 
-            Prime factor $2022 = 2 \cdot 3 \cdot 337$ and note that if $s = 337$, then $t = 1$ else $(s + 1)(t + 1) \geq 1000$. This gives one possible $x$. If $s = 337 p$ for any prime $p$ then $t < 1$ which contradicts that $x$ is even. So we consider $s = 1, 2, 3, 6$ and apply the second assertion to give $t \in [1,498], [1,332], [1,248], [1, 141]$ respectively, for a total of $1 + 498 + 332 + 248 + 141 = 1220$ possible Threetastic numbers, all of which clearly valid.
+            Prime factor $2022 = 2 \cdot 3 \cdot 337$ and note that if $s = 337$, then $t = 1$ else $(s + 1)(t + 1) \geq 1000$. This gives one possible $x$. If $s = 337 p$ for any prime $p$ then $t < 1$ which contradicts that $x$ is even. So we consider $s = 1, 2, 3, 6$ and apply the second assertion to give $t \in [1,498], [1,332], [1,248], [1, 141]$ respectively, for a total of $1 + 498 + 332 + 248 + 141 = 1220$ Threetastic numbers.
         \end{enumerate}
     \end{solution}
 
     \item {[$8$ points]} On an infinitely long railroad from west to east, $n$ trains cars, some containing dynamite, start evenly spaced and all move due east at distinct constant speeds. When one train $A$ catches up to another train $B$, $A$ slows down and the front of $A$ connects to the back of $B$ to become a longer train. Train cars by themselves are also considered a train. Note the number of train cars in this longer train is the number of train cars in $A$ plus the number of train cars in $B$, and the longer train continues moving at the same speed as $B$. After a long time has passed (such that no new train connections will take place), the trains halt and are inspected. A train is \emph{safe} if it has two consecutive train cars both not containing dynamite, otherwise it is \emph{dangerous}. All dangerous trains are removed from the track due to safety hazards, and the total amount of removed \emph{train cars} is $N$. Derive an expression in $n$ for the expected value of $N$. 
     
-    \textrm{\emph{Proposed by Polarity}}
+    \textrm{\emph{Proposed by Polarity (TropicoMango)}}
 
     \begin{solution}
-        
+        There are many variables in this problem and it can be hard to keep track of anything. So we try to be optimistic and search for what's \emph{invariant}. The key idea is to consider the \emph{slowest} train $T$. Note that, all trains behind $T$ will at some point all merge into $T$ to become a longer train. Furthermore, all trains ahead of $T$ will never interact with $T$ or the trains behind it. So, we note that the trains ahead of $T$ form their own system with the same assertions given in the problem statement being true in that own system! 
+        \\ \\ 
+        This motivates us to apply a recursion. We define $f(x)$ to be the probability that a train of length $x$ (consisting of $x$ train cars) is dangerous. Note $xf(x)$ is the expected value of train cars removed from this train, as it is 0 if it's not dangerous but $x$ if it is. We define $E(n)$ to be the desired expected value of $N$, on a system starting with $n$ train cars as stated in the problem. 
+        \\ \\ 
+        Now the key recursion:
+        \[E(n) = \frac{1}{n}\sum_{i = 1}^{n} i f(i) + E(n - i)\]
+        Here we iterate over all $i$, the possible positions of the slowest train, and sum the expected value $i f(i) + E(n - i)$ (a train of length $i$ and a new system with $n - i$ train cars) in each case, and finally take the average. 
+        \\ \\ 
+        From here, the (in my opinion, beautiful) ad-hoc component of the problem is eliminated and all that is left is algebraic techniques to solve for the answer. But the problem is not exactly trivially over yet, there is still much work to do. 
+        \\ \\ 
+        The recursion is still quite tricky to deal with. We can simplify it by subtracting consecutive terms! Consider $E(n + 1) - E(n)$:
+        \[E(n + 1) - E(n) = \frac{1}{n + 1}\sum_{i = 1}^{n + 1} i f(i) + E(n + 1 - i) - \frac{1}{n}\sum_{i = 1}^{n} i f(i) + E(n - i)\]
+        We remove the weights 
+        \[(n + 1)E(n + 1) - nE(n) = \sum_{i = 1}^{n + 1} i f(i) + E(n + 1 - i) - \sum_{i = 1}^{n} i f(i) + E(n - i)\]
+        \[(n + 1)E(n + 1) - nE(n) = (n + 1)f(n + 1) + E(n)\]
+        \[E(n + 1) = f(n + 1) + E(n)\]
+        $F(0) = 0$, hence 
+        \[E(n) = \sum_{i = 1}^{n} f(n)\]
+        Now we hope to find $f(n)$, and luckily we are able to do so!
+        \begin{lemma}
+            $f(n) = \frac{F_{n + 2}}{2^n}$, where $F_i$ is the $i$-th Fibonnaci number.
+        \end{lemma}
+        \begin{proof}[Proof of Lemma]
+            Note $f(n) = \frac{g(n)}{2^n}$, where $g(n)$ is the number of possible length $n$ dangerous trains. Consider the first train car. If it contains dynamite, the entire train is dangerous if and only if the rest (without the first train car) of the train is dangerous. If it doesn't contain dynamite, the next train car must contain dynamite, and then the rest of the train must be dangerous. $g(n) = g(n - 1) + g(n - 2)$, and $g(1) = 2$, $g(2) = 3$. Thus $g(n) = F_{n + 2}$.
+        \end{proof}
+
+        It remains to determine 
+        \[E(n) = \sum_{i = 1}^{n} \frac{F_{n + 2}}{2^n}\]
+        The reader of this solution probably recognizes the similar famous problem $\sum_{i=1}^{\infty} \frac{F_n}{2^n}$. Our desired sum (and the famous problem) can be solved by substituting $F_{n + 2} = F_{n + 1} + F_{n}$ as follows:
+        \[E(n) = \sum_{i = 1}^{n} \frac{F_{n + 1} + F_{n}}{2^n}\]
+        \[= \frac{1}{2} \sum_{i = 1}^{n} \frac{F_{n + 1}}{2^{n- 1}} + \frac{1}{4} \sum_{i = 1}^{n} \frac{F_{n}}{2^{n - 2}}\]
+        \[= \frac{1}{2} \sum_{i = 0}^{n - 1} \frac{F_{n + 2}}{2^{n}} + \frac{1}{4} \sum_{i = -1}^{n - 2} \frac{F_{n + 2}}{2^{n}}\]
+        \[E(n) = \frac{1}{2}(E(n) + \frac{F_2}{1} - \frac{F_{n + 2}}{2^n}) + \frac{1}{4}(E(n) + \frac{F_2}{1} + 2F_1 - \frac{F_{n + 2}}{2^n} - \frac{F_{n + 1}}{2^{n - 1}})\]
+        Solving yields
+        \[E(n) = 5 - \frac{2F_{n + 3} + F_{n + 2}}{2^n}\]
     \end{solution}
 \end{enumerate}
  
@@ -155,8 +189,32 @@ Numerical answers can be rounded to one decimal place. Physics constants can be 
 \begin{enumerate}[align=left,start=1,label=\textbf{\textcolor{meared}{Problem \arabic*}}]
     \item {[$4$ points*]}
         Anduwu is driving a car with an open rectangular container of milk inside. The container is $6$ inches long, $6$ inches wide, and $5$ inches high, containing milk $3$ inches high when level. He encounters a circular curve on the highway with a radius of $\qty{200}{\meter}$, and one side of the milk container remains parallel to the car's velocity throughout the curve. Assume the milk has negligible viscosity, the car has negligible body roll, and the coefficient of static friction between the tires and road is $1.6$. Whats the fastest speed Anduwu can travel at, while having the car neither slip nor spill the milk?
+
+        \textrm{\emph{Proposed by BariumLanthanum}}
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[scale=0.6]{physicsa1.png}
+            \includegraphics[scale=0.6]{physicsa11.png}
+        \end{figure}
     \item {[$5$ points*]} 
          A certain scientific railgun with mass $\qty{10000}{\kilo\gram}$ stationed in deep space (negligible gravity from outside the system) uses an electric charge to shoot a coin-shaped projectile, which is accelerated by the electrical potential difference. The coin is shot directly toward a stationary target practically infinite distance away. The coin has a mass of $\qty{10}{\kilo\gram}$ and a positive charge of $\qty{1}{\micro\coulomb}$. Inside the railgun there is a sphere of positive charge $N\,\unit{\coulomb}$. If the coin hits the target at $\qty[per-mode = symbol]{2000}{\meter\per\second}$, what is the value of $N$?
+
+        \textrm{\emph{Proposed by BariumLanthanum}}
+        \begin{solution}
+            The change in electrical potential is equal to the total change in kinetic energy.
+            Let the electrical potential at the start be $P$. The electric potential at the end is approximately 0, because the distance is infinite, and electric potential = $k_e (q_1 \cdot q_2) / r$.
+            \[P = 9 \cdot \num{1e9} \cdot (\num{1e-6} \cdot q)\]
+            The momentum of the coin is $\qty{20000}{\kilogram \meter \per \second \squared}$, since momentum is conserved the momentum of the railgun is also $\qty{20000}{\kilogram \meter \per \second \squared}$, so its speed is $\qty{2}{\meter \per \second}$.
+            \\ \\
+            The kinetic energy of the coin should be $\frac{10 \cdot 2000^2}{2}  = \qty{2e7}{\joule}$
+            The kinetic energy of the railgun is similarly $\qty{20000}{\joule}$
+            \\ \\
+            Since change in electric potential energy = change in kinetic energy and final electric potential energy is $0$, $P = \qty{20020000}{\joule}$.
+            Let $q =$ charge on railgun.
+            Electrostatic constant $k_e = \num{9e9}$
+            \[q = \frac{20020000}{9 \cdot \num{1e9} \cdot \num{1e-6}}\]
+            \[= \qty{2224.4}{\coulomb}\]
+        \end{solution}
     \item
         Bala is conducting an interesting experiment with a special cubic device shipped from Brazil. This device is a lightweight cube with a mass of $\qty{2}{\gram}$, with each face having a purely cosmetic label as shown in the diagram.
         \begin{figure}[!ht]
@@ -164,13 +222,28 @@ Numerical answers can be rounded to one decimal place. Physics constants can be 
             \includegraphics[scale=0.6]{cube.png}
             \caption{Net of the cubic device}
         \end{figure}
-        The cube continuously emits red, blue, or green light on exactly three specific faces, with each such face emitting photons perpendicular to the face. He places the cube on a large flat frictionless surface with the face labelled \emph{2} facing directly north and face \emph{1} pointing upward. The cube moves without any external force and solely from emitting light at a power of \qty{20}{\watt} per light emitting face. Bala records its motion using his favorite Lenovo Thinkpad. When he starts the experiment, all of the light emitting faces emit red light. After $3$ hours, they all start emitting blue light, and then after $3$ hours again they all emit green light, and red light again and the loop repeats. After $7$ hours of the experiment, Bala measures that the cube has an instantaneous velocity of $v = \qty[per-mode = symbol]{0.848}{\meter\per\second}$, directly southeast. 
+        The cube continuously emits red, blue, or green light on exactly three specific faces, with each such face emitting photons perpendicular to the face. He places the cube on a large flat frictionless surface with the face labelled \emph{2} facing directly north and face \emph{1} pointing upward. The cube moves without any external force and solely from emitting light at a power of \qty{20}{\watt} per light emitting face. Bala records its motion using his favorite Lenovo Thinkpad. When he starts the experiment, all of the light emitting faces emit red light. After $3$ hours, they all start emitting blue light, and then after $3$ hours again they all emit green light, and red light again and the loop repeats. After $7$ hours of the experiment, Bala measures that the cube has an instantaneous velocity of $v = \qty[per-mode = symbol]{1.187}{\meter\per\second}$, directly southeast. 
         \begin{enumerate}
             \item {[$2$ points]} Find all possible combinations of the $3$ light emitting faces.
             \item {[$4$ points]} What is the velocity of the cube after $5$ hours had elapsed since the start of the experiment?
         \end{enumerate}
+
+        \textrm{\emph{Proposed by Jeffrey Li}}
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[scale=0.25]{physicsa3.jpeg}
+        \end{figure}
+    \newpage
     \item {[$7$ points]}  
         A cylindrical vessel of height $h$ and radius $r$ is two-thirds filled with liquid. It is rotated with constant angular velocity $\omega$ about its axis, which is vertical. Neglecting any surface tension effects, find an expression for the greatest angular velocity of rotation $\Omega$ for which the liquid docs not spill over the edge of the vessel.
+
+        \textrm{\emph{Proposed by Jeffrey Li}}
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[scale=0.7]{physicsa4.png}
+        \end{figure}
     \item 
         In Jeli's experiment, a cubical glass made up of Silicon dioxide (\ce{SiO_2}) is launched with an initial velocity of $\qty[per-mode = symbol]{10}{\meter\per\second}$. Then, it collides with a spring with a spring constant of $\qty[per-mode = symbol]{25}{\newton\per\meter}$ and compresses the spring to a maximum compression of $\qty[per-mode = symbol]{0.05}{\meter}$. During the compression, the glass cannot withstand such a resisting force and cracks are produced on the glass. The dimensions of the glass are $\qtyproduct{4 x 10 x 2}{\centi\meter}$.
 
@@ -192,6 +265,17 @@ Numerical answers can be rounded to one decimal place. Physics constants can be 
             \item {[$3$ points]} Using the latent heat of vaporization, estimate the bonding energy of glass.
             \item {[$3$ points]} Find the percentage of the energy lost in this collision (energy that doesn`t convert into either energy of breaking the bonds or spring potential energy).
         \end{enumerate}
+
+        \textrm{\emph{Proposed by Jeffrey Li}}
+
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[scale=0.8]{physicsa5.png}
+        \end{figure}
+        \begin{figure}[!ht]
+            \centering
+            \includegraphics[scale=0.8]{physicsa51.png}
+        \end{figure}
 \end{enumerate}
 
 \end{document}
